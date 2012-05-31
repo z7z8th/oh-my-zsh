@@ -15,11 +15,11 @@ eval PR_BOLD="%{$terminfo[bold]%}"
 
 # Check the UID
 if [[ $UID -ge 1000 ]]; then # normal user
-  eval PR_USER='${PR_GREEN}%n${PR_NO_COLOR}'
-  eval PR_USER_OP='${PR_GREEN}%#${PR_NO_COLOR}'
+  eval PR_USER='${PR_BOLD}${PR_MAGENTA}%n${PR_NO_COLOR}'
+  eval PR_USER_OP='${PR_MAGENTA}%#${PR_NO_COLOR}'
   local PR_PROMPT='$PR_NO_COLOR➤ $PR_NO_COLOR'
 elif [[ $UID -eq 0 ]]; then # root
-  eval PR_USER='${PR_RED}%n${PR_NO_COLOR}'
+  eval PR_USER='${PR_BOLD}${PR_RED}%n${PR_NO_COLOR}'
   eval PR_USER_OP='${PR_RED}%#${PR_NO_COLOR}'
   local PR_PROMPT='$PR_RED➤ $PR_NO_COLOR'
 fi
@@ -33,7 +33,7 @@ fi
 
 local return_code="%(?..%{$PR_RED%}%? ↵%{$PR_NO_COLOR%})"
 
-local user_host='${PR_USER}${PR_CYAN}@${PR_HOST}'
+local user_host='${PR_USER}${PR_BLUE}@${PR_HOST}'
 local current_dir='%{$PR_BOLD$PR_BLUE%}%~%{$PR_NO_COLOR%}'
 local rvm_ruby=''
 if which rvm-prompt &> /dev/null; then
@@ -47,7 +47,7 @@ local git_branch='$(git_prompt_info)%{$PR_NO_COLOR%}'
 
 #PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
 PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
-╰─$PR_PROMPT "
+╰─$PR_PROMPT"
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$PR_YELLOW%}‹"
