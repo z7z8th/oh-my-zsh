@@ -57,3 +57,4 @@ plugins=(git debian github mercurial python ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=/sbin:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/games:/usr/games:$HOME/python/bin:$HOME/bin
