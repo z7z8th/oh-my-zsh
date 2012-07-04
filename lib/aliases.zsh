@@ -31,6 +31,7 @@ alias aptsh='apt-cache show'
 alias apti='apt-get install'
 alias aptu='apt-get update'
 
+alias bl='bash -l'
 alias cda4='cd /opt/android4.0/'
 alias cda2='cd /opt/android2.2/'
 alias cda2a='cd /opt/android2.2-BSP12R_A1/'
