@@ -1,3 +1,5 @@
+h2. This is a fork of https://github.com/robbyrussell/oh-my-zsh.git
+
 !https://s3.amazonaws.com/ohmyzsh/oh-my-zsh-logo.png!
 
 oh-my-zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes, and few things that make you shout...
