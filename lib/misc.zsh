@@ -13,3 +13,15 @@ export PAGER="less"
 export LESS="-R"
 
 export LC_CTYPE=$LANG
+
+## use 4 process for concurrent build
+export MAKEFLAGS='-j4'
+
+## use a more functional term
+# if we are using xterm, it is very likely that we can use xterm-256color
+case $TERM in
+    xterm*)
+        TERM=xterm-256color
+        export TERM
+        ;;
+esac
