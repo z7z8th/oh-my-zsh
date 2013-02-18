@@ -8,9 +8,11 @@ bindkey "^[m" copy-prev-shell-word
 ## jobs
 setopt long_list_jobs
 
-## pager
-export PAGER="less"
-export LESS="-R"
+
+export EDITOR=emacs
+export PAGER="less -R"
+export BROWSER=x-www-browser
+
 
 export LC_CTYPE=$LANG
 
@@ -25,3 +27,6 @@ case $TERM in
         export TERM
         ;;
 esac
+
+SU_PATH=/sbin:/usr/sbin:/usr/local/sbin
+export PATH=$PATH:$SU_PATH

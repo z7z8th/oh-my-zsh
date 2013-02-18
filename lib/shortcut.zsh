@@ -14,3 +14,7 @@ function asdkpath() {
     echo $PATH
 }
 
+function armpath() {
+    export PATH=$HOME/Downloads/arm-2012.09/bin:$PATH
+    echo $PATH
+}
