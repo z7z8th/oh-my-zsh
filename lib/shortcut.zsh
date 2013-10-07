@@ -1,4 +1,3 @@
-
 function a2path() {
     export PATH=/opt/android2.2/out/host/linux-x86/bin:$PATH
     echo $PATH
@@ -16,5 +15,10 @@ function asdkpath() {
 
 function armpath() {
     export PATH=$HOME/Downloads/arm-2012.09/bin:$PATH
+    echo $PATH
+}
+
+function armgccpath() {
+    export PATH=/opt2/toolchains/arm-eabi-4.6/bin:$PATH
     echo $PATH
 }

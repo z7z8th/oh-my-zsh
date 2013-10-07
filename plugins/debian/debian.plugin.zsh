@@ -18,6 +18,8 @@ if [[ -e $( which -p sudo 2>&1 ) ]]; then
 fi
 
 # Aliases ###################################################################
+
+if false; then # for disable awful aliases
 # These are for more obscure uses of apt-get and aptitude that aren't covered
 # below.
 alias ag='apt-get'
@@ -109,6 +111,7 @@ else
         ?not(~n`uname -r`))'\'' root'
 fi
 
+fi # for disable awful aliases
 
 # Misc. #####################################################################
 # print all installed packages

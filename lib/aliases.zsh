@@ -21,8 +21,7 @@ alias la='ls -A'
 alias lsa='ls -lah'
 alias l='ls -la'
 alias ll='ls -l'
-alias la='ls -lA'
-alias sl=ls # often screw this up
+# alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
 
@@ -48,3 +47,15 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias bl='bash -l'
 alias muttm='zless /usr/share/doc/mutt/manual.txt.gz'
+alias slc='xscreensaver-command -lock &;'
+alias sls='xscreensaver-command -lock &; sleep 0.5s; sudo pm-suspend;'
+
+alias emacs='/usr/bin/emacs -nw'
+alias emacsx='/usr/bin/emacs'
+alias em='/usr/bin/emacs -nw'
+alias emx='/usr/bin/emacs'
+
+#alias vi='echo Please use Emacs!'
+alias vim='echo Please use Emacs!'
+
+alias insight='env WINEPREFIX="/home/z7z8th/.wine" wine "C:\\Program Files\\Source Insight 3\\insight3.exe"'
