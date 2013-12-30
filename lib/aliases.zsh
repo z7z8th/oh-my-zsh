@@ -51,6 +51,7 @@ alias cda4='cd /src/android4.0/'
 alias cda2='cd /src/android2.2/'
 alias cda2a='cd /src/android2.2-BSP12R_A1/'
 alias gae-proxy='~/Downloads/goagent/local/proxy.py'
+alias cds='cd /src/'
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
