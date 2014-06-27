@@ -18,3 +18,6 @@ export LC_CTYPE=$LANG
 
 ## use 4 process for concurrent build
 export MAKEFLAGS='-j4'
+
+[ -d "$HOME/bin/" ] && export PATH=$HOME/bin:$PATH
+
