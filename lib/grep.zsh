@@ -21,4 +21,4 @@ fi
 unfunction grep-flag-available
 
 export GREP_OPTIONS="$GREP_OPTIONS"
-export GREP_COLOR='1;32'
+export GREP_COLOR='1;31'
