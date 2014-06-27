@@ -13,3 +13,6 @@ export PAGER="less"
 export LESS="-R"
 
 export LC_CTYPE=$LANG
+
+## use 4 process for concurrent build
+export MAKEFLAGS='-j4'
