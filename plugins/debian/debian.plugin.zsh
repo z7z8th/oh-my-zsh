@@ -19,6 +19,8 @@ if [[ -e $( which -p sudo 2>&1 ) ]]; then
 fi
 
 # Aliases ###################################################################
+
+if false; then # for disable awful aliases
 # These are for more obscure uses of apt-get and aptitude that aren't covered
 # below.
 alias age='apt-get'
@@ -142,6 +144,7 @@ apt_pref_compdef ail "install"
 apt_pref_compdef ap  "purge"
 apt_pref_compdef ar  "remove"
 apt_pref_compdef ads "dselect-upgrade"
+fi # for disable awful aliases
 
 # Misc. #####################################################################
 # print all installed packages
