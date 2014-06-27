@@ -2,6 +2,8 @@
 # Based on bira theme
 
 # load some modules
+
+
 autoload -U colors zsh/terminfo # Used in the colour alias below
 colors
 setopt prompt_subst
@@ -10,7 +12,7 @@ setopt prompt_subst
 for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
   eval PR_$color='%{$fg[${(L)color}]%}'
 done
-eval PR_NO_COLOR="%{$terminfo[sgr0]%}"
+PR_NO_COLOR="%{$reset_color%}"
 eval PR_BOLD="%{$terminfo[bold]%}"
 
 # Check the UID
@@ -47,8 +49,9 @@ local git_branch='$(git_prompt_info)%{$PR_NO_COLOR%}'
 
 #PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
 PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
-$PR_BOLD$PR_MAGENTA<@>$PR_PROMPT"
+$PR_BOLD$PR_MAGENTA<@>$PR_PROMPT$PR_NO_COLOR"
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$PR_YELLOW%}<"
 ZSH_THEME_GIT_PROMPT_SUFFIX="> %{$PR_NO_COLOR%}"
+
