@@ -1,6 +1,3 @@
-
-export EDITOR=vim
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -54,7 +51,7 @@ ZSH_THEME="gnzh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian github mercurial python ssh-agent)
+plugins=(git debian github mercurial python ssh-agent battery pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,3 +77,20 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export PATH=/sbin:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/games:/usr/games:$HOME/python/bin:$HOME/bin
+
+# use more process to build
+PROCESSOR_CNT=`grep -E 'processor.*:.*[0-9]+' /proc/cpuinfo | wc -l `
+export MAKEFLAGS=-j$((PROCESSOR_CNT+1))
+
+# no beep
+set -B
+
+# Customize to your needs...
+export PERL_LOCAL_LIB_ROOT="$HOME/perl5";
+export PERL_MB_OPT="--install_base $HOME/perl5";
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5";
+export PERL5LIB="$HOME/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:$HOME/perl5/lib/perl5";
+export PATH="$HOME/perl5/bin:$PATH";
+
+source ~/perl5/perlbrew/etc/bashrc
+
