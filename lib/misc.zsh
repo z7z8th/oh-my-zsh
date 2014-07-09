@@ -21,3 +21,4 @@ export MAKEFLAGS='-j4'
 
 [ -d "$HOME/bin/" ] && export PATH=$HOME/bin:$PATH
 
+set -o NO_NOMATCH
