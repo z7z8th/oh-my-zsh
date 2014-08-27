@@ -53,6 +53,8 @@ ZSH_THEME="gnzh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git debian github mercurial python ssh-agent battery pip)
 
+source /etc/profile.d/vte.sh
+#source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
