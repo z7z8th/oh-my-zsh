@@ -20,5 +20,6 @@ export LC_CTYPE=$LANG
 export MAKEFLAGS='-j4'
 
 [ -d "$HOME/bin/" ] && export PATH=$HOME/bin:$PATH
+export  PATH=/sbin:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/games:/usr/games:$HOME/python/bin:$HOME/bin
 
 set -o NO_NOMATCH
